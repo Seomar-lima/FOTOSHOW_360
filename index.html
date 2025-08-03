@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLATAFORMA 360° - FOTOSHOWFEST</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="time-display" id="current-time"></div>
+        <div class="logo">
+            <svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+                <text x="100" y="25" font-family="Arial" font-size="20" fill="#FFA500" text-anchor="middle">FOTOSHOWFEST</text>
+                <text x="100" y="35" font-family="Arial" font-size="12" fill="#FFA500" text-anchor="middle">PLATAFORMA 360°</text>
+            </svg>
+        </div>
+    </div>
+
+    <div class="instructions">
+        <p>Posicione-se no centro e gire lentamente enquanto gravamos seu vídeo 360°</p>
+    </div>
+
+    <div class="camera-container">
+        <video id="video" autoplay playsinline></video>
+        <div id="countdown" class="countdown"></div>
+        <div id="recording-timer" class="timer-display">00:00</div>
+    </div>
+
+    <button id="capture-btn" class="capture-btn">GRAVAR VÍDEO</button>
+
+    <div id="loading" class="loading-screen">
+        <div class="spinner"></div>
+        <p>Processando seu vídeo 360°...</p>
+    </div>
+
+    <div id="result" class="result-container">
+        <h3 id="qr-title">Escaneie para baixar seu vídeo</h3>
+        <p id="qr-subtitle">Compartilhe com seus amigos!</p>
+        <div id="qrcode"></div>
+        <div id="qr-expire-label">QR code expira em:</div>
+        <div id="qr-timer"></div>
+        <div id="qr-expired-msg">
+            CASO NÃO TENHA CONSEGUIDO BAIXAR SEU VÍDEO, ENTRE EM CONTATO COM O RESPONSÁVEL PELO EVENTO OU GRAVE OUTRO VÍDEO.
+        </div>
+    </div>
+
+    <div class="video-gallery-container">
+        <h3>Galeria de Vídeos</h3>
+        <div id="videos" class="videos"></div>
+        <button id="clear-videos" class="clear-btn">Limpar Galeria</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
